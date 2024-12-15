@@ -1,0 +1,7 @@
+@use "../../../assets/styles/text_mixins";
+
+.message {
+  @include text_mixins.text-form-error-message;
+
+  color: var(--input-error-color);
+}

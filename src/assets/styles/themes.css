@@ -1,5 +1,6 @@
 :root {
   --bg-color: #0E1621;
+  --input-error-color: #A61717;
 }
 
 [data-theme="light"] {
