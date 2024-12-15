@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Noto Sans";
+  src:
+      url('NotoSans-Regular.woff2') format('woff2'),
+      url('NotoSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OleoScriptSwashCaps";
+  src:
+      url('OleoScriptSwashCaps-Regular.woff2') format('woff2'),
+      url('OleoScriptSwashCaps-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
