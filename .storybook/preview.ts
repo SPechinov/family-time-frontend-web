@@ -1,5 +1,6 @@
 import { Preview, ReactRenderer } from '@storybook/react';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
+
 // @ts-ignore
 import '../src/assets/styles/main.css';
 
