@@ -1,0 +1,35 @@
+@import "../fonts/fonts.css";
+@import "./themes.css";
+
+
+:root {
+  --default-font: "Noto Sans", system-ui, Avenir, Helvetica, Arial;
+
+  font-family: var(--default-font), sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  transition: background-color 0.3ms ease-in-out;
+}
+
+button {
+  font-family: var(--default-font), sans-serif;
+}
+
+input {
+  font-family: var(--default-font), sans-serif;
+}
