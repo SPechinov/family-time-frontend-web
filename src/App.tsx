@@ -1,8 +1,6 @@
 function App() {
-  return (
-    <>
-    </>
-  )
+  console.log('123');
+  return <></>;
 }
 
-export default App
+export default App;
