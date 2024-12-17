@@ -1,4 +1,19 @@
-@mixin text-form-error-message {
+@mixin text-error-message {
   font-size: 14px;
   line-height: 16px;
+}
+
+@mixin text-form {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin text-form-placeholder {
+  font-size: 16px;
+  line-height: 34px;
+}
+
+@mixin text-form-placeholder-active {
+  font-size: 10px;
+  line-height: 14px;
 }

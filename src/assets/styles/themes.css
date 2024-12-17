@@ -1,6 +1,14 @@
 :root {
   --bg-color: #0E1621;
-  --input-error-color: #A61717;
+  --error-message-color: #A61717;
+
+  --input-bg-color: #17212B;
+  --input-error-color: var(--error-message-color);
+  --input-border-color: #1E2C3A;
+  --input-focus-border-color: #C3C4C5;
+  --input-placeholder-color: #7F91A4;
+  --input-text-color: #F5F5F5;
+  --input-icon-color: #7F91A4;
 }
 
 [data-theme="light"] {

@@ -1,0 +1,56 @@
+@use "../../../assets/styles/text_mixins";
+@use "../../../assets/styles/variables";
+
+.wrapper {
+  width: 100%;
+}
+
+.inner {
+  position: relative;
+}
+
+.input {
+  @include text_mixins.text-form;
+}
+
+.placeholder {
+  @include text_mixins.text-form-placeholder;
+}
+
+.input {
+  padding: 20px 18px 6px 18px;
+  color: var(--input-text-color);
+  background-color: var(--input-bg-color);
+  border: 2px solid var(--input-border-color);
+  border-radius: 12px;
+
+  &:hover:not(:disabled):not(:read-only),
+  &:focus:not(:disabled):not(:read-only) {
+    & ~ .placeholder {
+      color: var(--input-text-color);
+    }
+  }
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    & ~ .placeholder {
+      @include text_mixins.text-form-placeholder-active;
+    }
+  }
+}
+
+.placeholder {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  color: var(--input-placeholder-color);
+  pointer-events: none;
+  transition:
+    font-size variables.$default-transition-time variables.$default-transition-easing,
+    line-height variables.$default-transition-time variables.$default-transition-easing,
+    color variables.$default-transition-time variables.$default-transition-easing;
+}
+
+.errorMessage {
+  margin-top: 4px;
+}
