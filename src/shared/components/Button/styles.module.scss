@@ -1,0 +1,23 @@
+@use "../../../assets/styles/text_mixins";
+@use "../../../assets/styles/variables";
+
+.button {
+  @include text_mixins.text-button;
+
+  padding: 15px 16px;
+  border-radius: 12px;
+  transition: opacity variables.$default-transition-time variables.$default-transition-easing;
+
+  &:hover:not(:disabled) {
+    opacity: 0.8;
+  }
+}
+
+.primary {
+  background-color: var(--button-primary-bg-color);
+  color: var(--button-primary-color);
+}
+
+.transparent {
+    color: var(--button-transparent-color);
+}

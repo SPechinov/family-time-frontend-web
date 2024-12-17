@@ -11,6 +11,11 @@
   --input-icon-color: #7F91A4;
   --input-adornment-fill: #7F91A4;
   --input-focus-adornment-fill: #F5F5F5;
+
+  --button-primary-bg-color: #2F6EA5;
+  --button-primary-color: #FFF;
+
+  --button-transparent-color: #2F6EA5;
 }
 
 [data-theme="light"] {
