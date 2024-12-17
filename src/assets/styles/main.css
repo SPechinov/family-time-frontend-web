@@ -27,7 +27,11 @@ body {
 }
 
 button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
   font-family: var(--default-font), sans-serif;
+  cursor: pointer;
 }
 
 input {

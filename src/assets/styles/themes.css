@@ -9,6 +9,8 @@
   --input-placeholder-color: #7F91A4;
   --input-text-color: #F5F5F5;
   --input-icon-color: #7F91A4;
+  --input-adornment-fill: #7F91A4;
+  --input-focus-adornment-fill: #F5F5F5;
 }
 
 [data-theme="light"] {
