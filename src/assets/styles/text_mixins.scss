@@ -22,3 +22,13 @@
   font-size: 16px;
   line-height: 20px;
 }
+
+@mixin text-label {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@mixin text-default-m {
+  font-size: 16px;
+  line-height: 20px;
+}

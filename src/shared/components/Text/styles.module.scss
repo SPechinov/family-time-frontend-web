@@ -1,0 +1,10 @@
+@use "../../../assets/styles/text_mixins";
+@use "../../../assets/styles/variables";
+
+.label {
+  @include text_mixins.text-label;
+}
+
+.defaultM {
+  @include text_mixins.text-default-m;
+}
