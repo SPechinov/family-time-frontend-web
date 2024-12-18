@@ -1,5 +1,4 @@
 :root {
-  /* Основные цвета (семантические названия) */
   --base-background: #0E1621;
   --base-error: #A61717;
   --base-accent: #0BB560;
@@ -8,7 +7,6 @@
   --base-text-medium: #7F91A4;
   --base-border: #1E2C3A;
 
-  /* Цвета ввода */
   --input-background: #17212B;
   --input-border: var(--base-border);
   --input-border-focused: #C3C4C5;
@@ -19,7 +17,6 @@
   --input-adornment-focused: var(--base-text-light);
   --input-error: var(--base-error);
 
-  /* Цвета кнопок */
   --button-primary-background: #2F6EA5;
   --button-primary-text: var(--base-text);
 
@@ -27,5 +24,26 @@
 }
 
   [data-theme="light"] {
-  --bg-color: #FFFFFF;
+    --base-background: #FFFFFF;
+    --base-error: #A61717;
+    --base-accent: #0BB560;
+    --base-text: #000000;
+    --base-text-light: #333333;
+    --base-text-medium: #666666;
+    --base-border: #CCCCCC;
+
+    --input-background: #EEEEEE;
+    --input-border: var(--base-border);
+    --input-border-focused: #007BFF;
+    --input-placeholder: var(--base-text-medium);
+    --input-text: var(--base-text);
+    --input-icon: var(--base-text-medium);
+    --input-adornment: var(--base-text-medium);
+    --input-adornment-focused: var(--base-text);
+    --input-error: var(--base-error);
+
+    --button-primary-background: #007BFF;
+    --button-primary-text: #FFF;
+
+    --button-transparent-text: #007BFF;
 }
