@@ -3,5 +3,5 @@
 .message {
   @include text_mixins.text-error-message;
 
-  color: var(--error-message-color);
+  color: var(--input-error);
 }

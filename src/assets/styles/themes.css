@@ -1,24 +1,31 @@
 :root {
-  --bg-color: #0E1621;
-  --error-message-color: #A61717;
-  --primary-color: #0BB560;
+  /* Основные цвета (семантические названия) */
+  --base-background: #0E1621;
+  --base-error: #A61717;
+  --base-accent: #0BB560;
+  --base-text: #FFF;
+  --base-text-light: #F5F5F5;
+  --base-text-medium: #7F91A4;
+  --base-border: #1E2C3A;
 
-  --input-bg-color: #17212B;
-  --input-error-color: var(--error-message-color);
-  --input-border-color: #1E2C3A;
-  --input-focus-border-color: #C3C4C5;
-  --input-placeholder-color: #7F91A4;
-  --input-text-color: #F5F5F5;
-  --input-icon-color: #7F91A4;
-  --input-adornment-fill: #7F91A4;
-  --input-focus-adornment-fill: #F5F5F5;
+  /* Цвета ввода */
+  --input-background: #17212B;
+  --input-border: var(--base-border);
+  --input-border-focused: #C3C4C5;
+  --input-placeholder: var(--base-text-medium);
+  --input-text: var(--base-text-light);
+  --input-icon: var(--base-text-medium);
+  --input-adornment: var(--base-text-medium);
+  --input-adornment-focused: var(--base-text-light);
+  --input-error: var(--base-error);
 
-  --button-primary-bg-color: #2F6EA5;
-  --button-primary-color: #FFF;
+  /* Цвета кнопок */
+  --button-primary-background: #2F6EA5;
+  --button-primary-text: var(--base-text);
 
-  --button-transparent-color: #2F6EA5;
+  --button-transparent-text: #2F6EA5;
 }
 
-[data-theme="light"] {
+  [data-theme="light"] {
   --bg-color: #FFFFFF;
 }
