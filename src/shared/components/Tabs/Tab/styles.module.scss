@@ -1,0 +1,14 @@
+@use "../../../../assets/styles/text_mixins";
+@use "../../../../assets/styles/variables";
+
+.tab {
+  @include text_mixins.text-button;
+
+  padding: 8px;
+  border-radius: 10px;
+
+}
+
+.active {
+  background-color: var(--tab-background-active);
+}

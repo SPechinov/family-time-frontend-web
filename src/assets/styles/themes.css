@@ -17,6 +17,9 @@
   --input-adornment-focused: var(--base-text-light);
   --input-error: var(--base-error);
 
+  --tabs-background: #17212B;
+  --tab-background-active: #1E2C3A;
+
   --button-primary-background: #2F6EA5;
   --button-primary-text: var(--base-text);
 
