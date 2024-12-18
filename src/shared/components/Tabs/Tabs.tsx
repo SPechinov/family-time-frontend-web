@@ -15,7 +15,7 @@ const Component: FC<Props> = ({
 }) => {
   const contextState = useContextState(children, activeValue);
 
-  const handleTabClick = useCallback<MouseEventHandler<HTMLDivElement>>(
+  const handleTabsClick = useCallback<MouseEventHandler<HTMLDivElement>>(
     (event) => {
       onClick?.(event);
       if (!(event.target instanceof HTMLButtonElement)) return;
@@ -33,7 +33,7 @@ const Component: FC<Props> = ({
       <div
         className={cn(styles.tabs, className)}
         role="tablist"
-        onClick={handleTabClick}
+        onClick={handleTabsClick}
         {...props}
       >
         {children}
