@@ -19,6 +19,7 @@
 
   --tabs-background: #17212B;
   --tab-background-active: #1E2C3A;
+  --tab-text: var(--base-text-light);
 
   --button-primary-background: #2F6EA5;
   --button-primary-text: var(--base-text);

@@ -1,51 +1,41 @@
-import {
-  Children,
-  cloneElement,
-  FC,
-  isValidElement,
-  useEffect,
-  useState,
-} from 'react';
-import { Context, Props } from './types.ts';
-import { Tab, TabProps } from './Tab';
+import { FC, useCallback, MouseEventHandler } from 'react';
+import { Props } from './types.ts';
+import { Tab } from './Tab';
 import cn from 'classnames';
 import styles from './styles.module.scss';
-import { TabsContext } from './Context.ts';
+import { TabsContext, useContextState } from './context.ts';
 
 const Component: FC<Props> = ({
   className,
   activeValue,
   onClickTab,
-  children: childrenProps,
+  children,
+  onClick,
   ...props
 }) => {
-  const contextState = useState<Context>({
-    childCount: Children.count(childrenProps),
-    activeValue: activeValue,
-  });
+  const contextState = useContextState(children, activeValue);
 
-  useEffect(() => {
-    contextState[1]((prevState) => ({
-      ...prevState,
-      activeValue,
-    }));
-  }, [activeValue]);
+  const handleClick = useCallback<MouseEventHandler<HTMLDivElement>>(
+    (event) => {
+      onClick?.(event);
+      if (!(event.target instanceof HTMLButtonElement)) return;
 
-  const children = Children.map(childrenProps, (child) => {
-    if (!isValidElement<TabProps>(child)) return null;
+      const dataValue = event.target.getAttribute('data-value');
+      if (!dataValue) return;
 
-    return cloneElement<TabProps>(child, {
-      ...child.props,
-      onClick: (event) => {
-        child.props.onClick?.(event);
-        onClickTab(child.props.value);
-      },
-    });
-  });
+      onClickTab(dataValue);
+    },
+    []
+  );
 
   return (
     <TabsContext.Provider value={contextState}>
-      <div className={cn(styles.tabs, className)} {...props}>
+      <div
+        className={cn(styles.tabs, className)}
+        role="tablist"
+        onClick={handleClick}
+        {...props}
+      >
         {children}
       </div>
     </TabsContext.Provider>
