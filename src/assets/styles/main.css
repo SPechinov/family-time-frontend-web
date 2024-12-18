@@ -21,9 +21,14 @@
 body {
   margin: 0;
   display: flex;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--bg-color);
   transition: background-color 0.3ms ease-in-out;
+}
+
+#root {
+  width: 100%;
+  min-height: 100dvh;
 }
 
 button {

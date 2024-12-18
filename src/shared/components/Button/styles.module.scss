@@ -4,6 +4,7 @@
 .button {
   @include text_mixins.text-button;
 
+  width: 100%;
   padding: 15px 16px;
   border-radius: 12px;
   transition: opacity variables.$default-transition-time variables.$default-transition-easing;

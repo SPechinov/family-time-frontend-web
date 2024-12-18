@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "preview": "vite preview --port 5173",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "generate-icons": "svgo -f ./src/shared/components/SvgIcon/icons --config ./svgo.config.cjs && node ./generate-icons.cjs"
