@@ -27,23 +27,23 @@
   --button-transparent-disabled-text: #667B90;
 }
 
-  [data-theme="light"] {
-    --base-background: #FFFFFF;
-    --base-error: #A61717;
-    --base-accent: #0BB560;
+[data-theme="light"] {
+  --base-background: #F8F8F8;
+  --base-error: #D9534F;
+  --base-accent: #0BB560;
 
-    --input-background: #EEEEEE;
-    --input-border: #CCCCCC;
-    --input-border-focused: #007BFF;
-    --input-placeholder: #666666;
-    --input-text: #000000;
-    --input-icon: #666666;
-    --input-adornment: #666666;
-    --input-adornment-focused: #000000;
-    --input-error: var(--base-error);
+  --input-background: #F5F5DC;
+  --input-border: #DCDCDC;
+  --input-border-focused: #007BFF;
+  --input-placeholder: #999999;
+  --input-text: #333333;
+  --input-icon: #999999;
+  --input-adornment: #999999;
+  --input-adornment-focused: #333333;
+  --input-error: var(--base-error);
 
-    --button-primary-background: #007BFF;
-    --button-primary-text: #FFF;
+  --button-primary-background: #007BFF;
+  --button-primary-text: #FFF;
 
-    --button-transparent-text: #007BFF;
+  --button-transparent-text: #007BFF;
 }
