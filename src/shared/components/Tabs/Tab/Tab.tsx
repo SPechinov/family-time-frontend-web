@@ -19,5 +19,3 @@ export const Tab = memo<Props>(({ className, value, ...props }) => {
     />
   );
 });
-
-Tab.displayName = 'Tabs.Tab';
