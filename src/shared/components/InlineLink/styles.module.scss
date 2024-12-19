@@ -1,0 +1,20 @@
+@use "../../../assets/styles/text_mixins";
+@use "../../../assets/styles/variables";
+
+.inlineLink {
+  color: var(--inline-link);
+  text-decoration: underline;
+  transition: color variables.$default-transition-time variables.$default-transition-easing;
+
+  &:hover {
+    color: var(--inline-link-hover);
+  }
+}
+
+.label {
+  @include text_mixins.text-label;
+}
+
+.defaultM {
+  @include text_mixins.text-default-m;
+}

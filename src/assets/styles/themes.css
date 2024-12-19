@@ -25,6 +25,9 @@
 
   --button-transparent-text: #2F6EA5;
   --button-transparent-disabled-text: #667B90;
+
+  --inline-link: #2F6EA5;
+  --inline-link-hover: #22649f;
 }
 
 [data-theme="light"] {
