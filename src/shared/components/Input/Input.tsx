@@ -24,7 +24,15 @@ export const Input = forwardRef<HTMLInputElement, Props>(
     }, []);
 
     return (
-      <div className={cn(styles.wrapper, className)}>
+      <div
+        className={cn(
+          styles.wrapper,
+          error && styles.error,
+          props.disabled && styles.disabled,
+          props.readOnly && styles.readOnly,
+          className
+        )}
+      >
         <div className={styles.inner}>
           <input
             id={id}

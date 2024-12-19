@@ -3,6 +3,27 @@
 
 .wrapper {
   width: 100%;
+
+  &.error {
+    .input {
+      border-color: var(--input-error);
+    }
+    .placeholder {
+      color: var(--input-error);
+    }
+  }
+
+  &.disabled {
+    .input {
+      color: var(--input-disabled-text);
+    }
+  }
+
+  &.readOnly {
+    .input {
+      border-style: dashed;
+    }
+  }
 }
 
 .inner {
@@ -21,6 +42,7 @@
   background-color: var(--input-background);
   border: 2px solid var(--input-border);
   border-radius: 12px;
+  outline: none;
 
   &:hover:not(:disabled):not(:read-only),
   &:focus:not(:disabled):not(:read-only) {
