@@ -19,9 +19,11 @@
   --tab-text: #F5F5F5;
 
   --button-primary-background: #2F6EA5;
+  --button-primary-disabled-background: #667B90;
   --button-primary-text: #FFF;
 
   --button-transparent-text: #2F6EA5;
+  --button-transparent-disabled-text: #667B90;
 }
 
   [data-theme="light"] {

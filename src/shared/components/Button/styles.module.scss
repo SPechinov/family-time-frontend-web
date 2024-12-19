@@ -1,24 +1,83 @@
 @use "../../../assets/styles/text_mixins";
 @use "../../../assets/styles/variables";
 
+%hide-content {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
 .button {
   @include text_mixins.text-button;
 
   width: 100%;
   padding: 15px 16px;
   border-radius: 12px;
-  transition: opacity variables.$default-transition-time variables.$default-transition-easing;
+  transition:
+    opacity variables.$default-transition-time variables.$default-transition-easing,
+    background-color variables.$default-transition-time variables.$default-transition-easing;
 
   &:hover:not(:disabled) {
     opacity: 0.8;
   }
+
+  &.loading {
+    .content {
+      @extend %hide-content;
+    }
+
+    .loader {
+      opacity: 1;
+      animation: animate-loader 1s infinite ease;
+    }
+  }
+}
+
+.loader {
+  @extend %hide-content;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .primary {
   background-color: var(--button-primary-background);
   color: var(--button-primary-text);
+
+  &.disabled {
+    background-color: var(--button-primary-disabled-background);
+  }
+
+  .loader {
+    fill: var(--button-primary-text);
+  }
 }
 
 .transparent {
-    color: var(--button-transparent-text);
+  background-color: transparent;
+  color: var(--button-transparent-text);
+
+  &.disabled {
+    color: var(--button-transparent-disabled-text);
+  }
+
+  .loader {
+    fill: var(--button-transparent-text);
+  }
+}
+
+@keyframes animate-loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(180deg);
+    opacity: 1;
+  }
 }

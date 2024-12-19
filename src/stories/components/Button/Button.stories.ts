@@ -24,5 +24,6 @@ export const Normal: Story = {
   args: {
     theme: 'primary',
     children: 'Preview input',
+    disabled: false,
   },
 };
