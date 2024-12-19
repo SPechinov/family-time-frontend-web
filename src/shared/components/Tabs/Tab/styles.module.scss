@@ -7,8 +7,17 @@
   padding: 8px;
   border-radius: 10px;
   color: var(--tab-text);
-}
+  transition: background-color variables.$default-transition-time variables.$default-transition-easing;
 
-.active {
-  background-color: var(--tab-background-active);
+  & * {
+    pointer-events: none;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--tab-background-hover);
+  }
+
+  &:disabled {
+    background-color: var(--tab-background-active);
+  }
 }

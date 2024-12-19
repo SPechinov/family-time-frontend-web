@@ -6,16 +6,11 @@ import { useTabsContext } from '../context.ts';
 
 export const Tab = memo<Props>(({ className, value, style, ...props }) => {
   const context = useTabsContext();
-
   const isActive = context.activeValue === value;
 
   return (
     <button
-      className={cn(styles.tab, isActive && styles.active, className)}
-      style={{
-        ...style,
-        width: `calc(100% / ${context.childCount})`,
-      }}
+      className={cn(styles.tab, className)}
       disabled={isActive}
       data-value={value}
       aria-selected={isActive}

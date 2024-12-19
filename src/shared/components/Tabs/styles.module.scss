@@ -2,9 +2,9 @@
 @use "../../../assets/styles/variables";
 
 .tabs {
-  display: flex;
-  width: 100%;
+  display: inline-flex;
   padding: 2px;
   background-color: var(--tabs-background);
   border-radius: 12px;
+  transition: background-color variables.$default-transition-time variables.$default-transition-easing;
 }

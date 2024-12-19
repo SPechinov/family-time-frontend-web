@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import { Tabs } from '../../../shared/components/Tabs';
 
 export const Component: React.FC = () => {
-  const [value, setValue] = useState('sign-in');
+  const [value, setValue] = useState('item-1');
   return (
-    <div style={{ width: '300px' }}>
-      <Tabs activeValue={value} onClickTab={setValue}>
-        <Tabs.Tab value="sign-in">Войти</Tabs.Tab>
-        <Tabs.Tab value="registration">Регистрация</Tabs.Tab>
-      </Tabs>
-    </div>
+    <Tabs activeValue={value} onClickTab={setValue}>
+      <Tabs.Tab value="item-1">Item 1</Tabs.Tab>
+      <Tabs.Tab value="long-item-2">Long item 2</Tabs.Tab>
+      <Tabs.Tab value="item-3">Item 3</Tabs.Tab>
+      <Tabs.Tab value="one-more-item-4">One more long item 4</Tabs.Tab>
+    </Tabs>
   );
 };

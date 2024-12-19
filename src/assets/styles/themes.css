@@ -2,27 +2,24 @@
   --base-background: #0E1621;
   --base-error: #A61717;
   --base-accent: #0BB560;
-  --base-text: #FFF;
-  --base-text-light: #F5F5F5;
-  --base-text-medium: #7F91A4;
-  --base-border: #1E2C3A;
 
   --input-background: #17212B;
-  --input-border: var(--base-border);
+  --input-border: #1E2C3A;
   --input-border-focused: #C3C4C5;
-  --input-placeholder: var(--base-text-medium);
-  --input-text: var(--base-text-light);
-  --input-icon: var(--base-text-medium);
-  --input-adornment: var(--base-text-medium);
-  --input-adornment-focused: var(--base-text-light);
+  --input-placeholder: #7F91A4;
+  --input-text: #F5F5F5;
+  --input-icon: #7F91A4;
+  --input-adornment: #7F91A4;
+  --input-adornment-focused: #F5F5F5;
   --input-error: var(--base-error);
 
   --tabs-background: #17212B;
   --tab-background-active: #1E2C3A;
-  --tab-text: var(--base-text-light);
+  --tab-background-hover: #192531;
+  --tab-text: #F5F5F5;
 
   --button-primary-background: #2F6EA5;
-  --button-primary-text: var(--base-text);
+  --button-primary-text: #FFF;
 
   --button-transparent-text: #2F6EA5;
 }
@@ -31,19 +28,15 @@
     --base-background: #FFFFFF;
     --base-error: #A61717;
     --base-accent: #0BB560;
-    --base-text: #000000;
-    --base-text-light: #333333;
-    --base-text-medium: #666666;
-    --base-border: #CCCCCC;
 
     --input-background: #EEEEEE;
-    --input-border: var(--base-border);
+    --input-border: #CCCCCC;
     --input-border-focused: #007BFF;
-    --input-placeholder: var(--base-text-medium);
-    --input-text: var(--base-text);
-    --input-icon: var(--base-text-medium);
-    --input-adornment: var(--base-text-medium);
-    --input-adornment-focused: var(--base-text);
+    --input-placeholder: #666666;
+    --input-text: #000000;
+    --input-icon: #666666;
+    --input-adornment: #666666;
+    --input-adornment-focused: #000000;
     --input-error: var(--base-error);
 
     --button-primary-background: #007BFF;

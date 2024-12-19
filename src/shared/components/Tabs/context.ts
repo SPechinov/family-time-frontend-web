@@ -1,28 +1,16 @@
-import { Children, createContext, ReactNode, useContext, useMemo } from 'react';
+import { createContext, useContext } from 'react';
 
 export type Context = {
-  childCount: number;
   activeValue: string;
 };
 
-const defaultContextValue: Context = {
-  childCount: 0,
-  activeValue: '',
-};
+export const TabsContext = createContext<Context | undefined>(undefined);
 
-export const TabsContext = createContext<Context>({ ...defaultContextValue });
+export const useTabsContext = (): Context => {
+  const context = useContext(TabsContext);
+  if (context === undefined) {
+    throw new Error('useTabsContext must be defined');
+  }
 
-export const useTabsContext = () => useContext(TabsContext);
-
-export const useContextState = (
-  children: ReactNode,
-  activeValue: string
-): Context => {
-  return useMemo<Context>(
-    () => ({
-      childCount: Children.count(children),
-      activeValue: activeValue,
-    }),
-    [children, activeValue]
-  );
+  return context;
 };
