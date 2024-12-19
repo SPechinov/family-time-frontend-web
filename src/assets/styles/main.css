@@ -4,6 +4,7 @@
 
 :root {
   --default-font: "Noto Sans", system-ui, Avenir, Helvetica, Arial;
+  --brand-font: "OleoScriptSwashCaps", system-ui, Avenir, Helvetica, Arial;
 
   font-family: var(--default-font), sans-serif;
   font-weight: 400;

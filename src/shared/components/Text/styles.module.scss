@@ -8,3 +8,7 @@
 .defaultM {
   @include text_mixins.text-default-m;
 }
+
+.brand {
+  @include text_mixins.text-brand;
+}

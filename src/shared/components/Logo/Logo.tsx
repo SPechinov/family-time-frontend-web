@@ -14,6 +14,7 @@ export const Logo: FC<Props> = ({
       {...props}
       width={containerSize}
       height={containerSize}
+      viewBox="0 0 200 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

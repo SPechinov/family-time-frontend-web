@@ -14,7 +14,7 @@ export const InputPassword: FC<Props> = (props) => {
     <Input
       type={type}
       endAdornment={
-        <button onClick={handleEyeClick}>
+        <button onClick={handleEyeClick} type="button">
           <SvgIcon value="i_24_eye" />
         </button>
       }

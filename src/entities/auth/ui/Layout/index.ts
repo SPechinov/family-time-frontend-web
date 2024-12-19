@@ -1,2 +1,2 @@
 export { Layout } from './Layout';
-export type { Props as LayoutProps } from './types';
+export type { Props } from './types';

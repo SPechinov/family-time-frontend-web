@@ -3,6 +3,7 @@ import { DOMAttributes, HTMLAttributes } from 'react';
 export enum Size {
   label = 'label',
   defaultM = 'defaultM',
+  brand = 'brand',
 }
 
 export enum Tag {

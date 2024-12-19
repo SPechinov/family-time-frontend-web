@@ -1,0 +1,32 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 20px;
+  min-height: 100dvh;
+}
+
+.top,
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.top {
+  justify-content: center;
+}
+
+.bottom {
+  margin-top: auto;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.title {
+  margin-top: 24px;
+  width: 100%;
+  text-align: center;
+}
