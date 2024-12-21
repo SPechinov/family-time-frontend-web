@@ -6,7 +6,10 @@ import { ErrorMessage } from '../ErrorMessage';
 import { mergeRefs } from '../../hooks';
 
 export const Input = forwardRef<HTMLInputElement, Props>(
-  ({ className, error, placeholder, endAdornment, ...props }, ref) => {
+  (
+    { className, error, placeholder, endAdornment, type = 'text', ...props },
+    ref
+  ) => {
     const id = useId();
     const endAdornmentRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -39,6 +42,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(
             ref={mergeRefs([ref, inputRef])}
             className={styles.input}
             placeholder={' '}
+            type={type}
             {...props}
           />
           <label

@@ -6,8 +6,12 @@
 .tabs {
   width: 100%;
 
-  .tab {
-    width: 50%;
+  .tab:first-child {
+    width: 40%;
+  }
+
+  .tab:last-child {
+    width: 60%;
   }
 }
 

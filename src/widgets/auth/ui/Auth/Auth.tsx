@@ -5,7 +5,7 @@ import { Tabs } from '../../../../shared';
 import { AUTH_WAYS_TABS } from './constants.ts';
 
 import styles from './styles.module.scss';
-import { SignInForm } from '../../../../entities/auth';
+import { SignInForm, SignUpForm } from '../../../../entities/auth';
 
 export const Auth: FC<Props> = ({ className }) => {
   const [activeTab, setActiveTab] = useState(AUTH_WAYS_TABS[0].value);
@@ -24,7 +24,11 @@ export const Auth: FC<Props> = ({ className }) => {
         ))}
       </Tabs>
       <div>
-        <SignInForm className={styles.form} />
+        {activeTab === AUTH_WAYS_TABS[0].value ? (
+          <SignInForm className={styles.form} />
+        ) : (
+          <SignUpForm className={styles.form} />
+        )}
       </div>
     </div>
   );
