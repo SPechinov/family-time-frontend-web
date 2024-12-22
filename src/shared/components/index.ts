@@ -6,3 +6,4 @@ export * from './Logo';
 export * from './Text';
 export * from './InlineLink';
 export * from './Tabs';
+export * from './Flag';

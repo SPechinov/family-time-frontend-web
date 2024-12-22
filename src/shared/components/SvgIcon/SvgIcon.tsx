@@ -29,7 +29,7 @@ export const SvgIcon = forwardRef<SVGSVGElement, SvgIconProps>(
           maxWidth: size,
           ...style,
         }}
-        className={cn('icon', `icon-${value}`, styles.icon, className)}
+        className={cn(styles.icon, className)}
         width={size}
         height={size}
       />
