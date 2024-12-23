@@ -1,0 +1,13 @@
+.list {
+  overflow: auto;
+  border-radius: 12px;
+  border: 2px solid var(--input-border);
+  background-color: var(--input-background);
+  min-height: 180px;
+  max-height: 400px;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,63 @@
+@use "../../../../assets/styles/text_mixins";
+@use "../../../../assets/styles/variables";
+
+.control {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 20px 8px 20px;
+  border: 2px solid var(--input-border);
+  border-radius: 12px;
+  background: var(--input-background);
+
+  &:focus {
+    color: var(--input-text);
+  }
+
+  &.selected {
+    .placeholder {
+      @include text_mixins.text-form-placeholder-active;
+      color: var(--input-text);
+    }
+  }
+
+  &.open {
+    .iconChevron {
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+.placeholder {
+  @include text_mixins.text-form-placeholder;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: calc(100% - 40px);
+  color: var(--input-placeholder);
+  pointer-events: none;
+  transition:
+    font-size variables.$default-transition-time variables.$default-transition-easing,
+    line-height variables.$default-transition-time variables.$default-transition-easing,
+    color variables.$default-transition-time variables.$default-transition-easing;
+}
+
+.value {
+  @include text_mixins.text-form;
+  padding-top: 10px;
+}
+
+.flag {
+  margin-left: auto;
+}
+
+.iconChevron {
+  margin-left: 12px;
+  top: 50%;
+  fill: var(--input-text);
+}
