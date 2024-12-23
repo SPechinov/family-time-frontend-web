@@ -3,7 +3,12 @@ import cn from 'classnames';
 
 import styles from './styles.module.scss';
 import { Props } from './types';
-import { Button, Input, InputPassword } from '../../../../shared';
+import {
+  Button,
+  Input,
+  InputPassword,
+  SelectCountry,
+} from '../../../../shared';
 
 export const SignUpForm: FC<Props> = ({ className }) => {
   return (
@@ -15,7 +20,7 @@ export const SignUpForm: FC<Props> = ({ className }) => {
         inputMode="email"
       />
       <InputPassword className={styles.input} placeholder="Password" />
-      <Input className={styles.input} placeholder="Откуда Вы?" />
+      <SelectCountry className={styles.input} placeholder="Откуда Вы?" />
       <Button className={styles.buttonSubmit} theme="primary" type="submit">
         Отправить код
       </Button>

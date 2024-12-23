@@ -17,6 +17,7 @@ export const Control = forwardRef<HTMLButtonElement, Props>(
     return (
       <button
         ref={ref}
+        type="button"
         className={cn(
           styles.control,
           value && styles.selected,
