@@ -8,14 +8,14 @@
   line-height: 20px;
 }
 
-@mixin form-placeholder {
-  font-size: 16px;
-  line-height: 34px;
-}
-
-@mixin form-placeholder-active {
-  font-size: 10px;
-  line-height: 14px;
+@mixin form-placeholder($active) {
+  @if ($active) {
+    font-size: 10px;
+    line-height: 14px;
+  } @else {
+    font-size: 16px;
+    line-height: 34px;
+  }
 }
 
 @mixin button {

@@ -3,72 +3,53 @@
 
 .wrapper {
   width: 100%;
-
-  &.error {
-    .input {
-      border-color: var(--input-error);
-    }
-    .placeholder {
-      color: var(--input-error);
-    }
-  }
-
-  &.disabled {
-    .input {
-      color: var(--input-disabled-text);
-    }
-  }
-
-  &.readOnly {
-    .input {
-      border-style: dashed;
-    }
-  }
 }
 
-.inner {
+.inputWrapper {
   position: relative;
   overflow: hidden;
 }
 
 .input {
   @include text_mixins.form;
-}
 
-.input {
   width: 100%;
   color: var(--input-text);
   padding: 20px 18px 6px 18px;
   background-color: var(--input-background);
   border: 2px solid var(--input-border);
-  border-radius: 12px;
+  border-radius: variables.$border-radius-m;
   outline: none;
+  transition: border-color variables.$default-transition-time variables.$default-transition-easing;
 
-  &:hover:not(:disabled):not(:read-only),
-  &:focus:not(:disabled):not(:read-only) {
-    & ~ .placeholder {
-      color: var(--input-text);
-    }
-
-    & ~ .endAdornment {
-      & > * {
-        fill: var(--input-adornment-focused);
-      }
-    }
+  &:hover:not(:read-only):not(:disabled) ~ .placeholder,
+  &:focus:not(:read-only) ~ .placeholder {
+    color: var(--input-text);
   }
 
-  &:focus,
-  &:not(:placeholder-shown) {
-    & ~ .placeholder {
-      @include text_mixins.form-placeholder-active;
-    }
+  &.error {
+    border-color: var(--input-error);
+  }
+
+  &:focus ~ .placeholder,
+  &:not(:placeholder-shown) ~ .placeholder {
+    @include text_mixins.form-placeholder(true);
+  }
+
+  &:disabled {
+    color: var(--input-disabled-text);
+  }
+
+  &:not(:disabled):read-only {
+    border-style: dashed;
   }
 }
 
 .placeholder {
-  @include text_mixins.form-placeholder;
+  @include text_mixins.form-placeholder(false);
+
   position: absolute;
-  top: 8px;
+  top: 7px;
   left: 20px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -85,7 +66,8 @@
 .endAdornment {
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 0;
+  padding-right: 20px;
   display: flex;
   align-items: center;
   transform: translateY(-50%);

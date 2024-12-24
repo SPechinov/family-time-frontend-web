@@ -18,7 +18,7 @@
 
   &.selected {
     .placeholder {
-      @include text_mixins.form-placeholder-active;
+      @include text_mixins.form-placeholder(true);
       color: var(--input-text);
     }
   }
@@ -31,7 +31,7 @@
 }
 
 .placeholder {
-  @include text_mixins.form-placeholder;
+  @include text_mixins.form-placeholder(false);
   position: absolute;
   top: 5px;
   left: 20px;

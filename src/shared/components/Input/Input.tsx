@@ -7,7 +7,15 @@ import { mergeRefs } from '../../hooks';
 
 export const Input = forwardRef<HTMLInputElement, Props>(
   (
-    { className, error, placeholder, endAdornment, type = 'text', ...props },
+    {
+      className,
+      error,
+      placeholder,
+      endAdornment,
+      classNameEndAdornment,
+      type = 'text',
+      ...props
+    },
     ref
   ) => {
     const id = useId();
@@ -21,26 +29,22 @@ export const Input = forwardRef<HTMLInputElement, Props>(
         placeholderRef.current &&
         endAdornmentRef.current
       ) {
-        inputRef.current.style.paddingRight = '48px';
-        placeholderRef.current.style.right = '48px';
+        const endAdornmentWidth =
+          endAdornmentRef.current.getBoundingClientRect().width;
+        const offset = `${endAdornmentWidth + 8}px`;
+
+        inputRef.current.style.paddingRight = offset;
+        placeholderRef.current.style.right = offset;
       }
     }, []);
 
     return (
-      <div
-        className={cn(
-          styles.wrapper,
-          error && styles.error,
-          props.disabled && styles.disabled,
-          props.readOnly && styles.readOnly,
-          className
-        )}
-      >
-        <div className={styles.inner}>
+      <div className={cn(styles.wrapper, className)}>
+        <div className={styles.inputWrapper}>
           <input
             id={id}
             ref={mergeRefs([ref, inputRef])}
-            className={styles.input}
+            className={cn(styles.input, error && styles.error)}
             placeholder={' '}
             type={type}
             {...props}
@@ -54,7 +58,10 @@ export const Input = forwardRef<HTMLInputElement, Props>(
           </label>
 
           {endAdornment && (
-            <div className={styles.endAdornment} ref={endAdornmentRef}>
+            <div
+              className={cn(styles.endAdornment, classNameEndAdornment)}
+              ref={endAdornmentRef}
+            >
               {endAdornment}
             </div>
           )}
