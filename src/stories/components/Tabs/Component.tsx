@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Tabs } from '../../../shared/components/Tabs';
+import { Tabs } from '../../../shared';
 
 export const Component: React.FC = () => {
   const [value, setValue] = useState('item-1');

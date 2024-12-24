@@ -17,6 +17,12 @@
   --inline-link: #2F6EA5;
   --inline-link-hover: #22649f;
 
+  /* Tabs */
+  --tabs-background: #17212B;
+  --tab-background-active: #1E2C3A;
+  --tab-background-hover: #192531;
+  --tab-text: #F5F5F5;
+
   --input-background: #17212B;
   --input-background-hover: #192531;
   --input-border: #1E2C3A;
@@ -28,11 +34,6 @@
   --input-adornment: #7F91A4;
   --input-adornment-focused: #F5F5F5;
   --input-error: var(--error);
-
-  --tabs-background: #17212B;
-  --tab-background-active: #1E2C3A;
-  --tab-background-hover: #192531;
-  --tab-text: #F5F5F5;
 }
 
 [data-theme="light"] {
