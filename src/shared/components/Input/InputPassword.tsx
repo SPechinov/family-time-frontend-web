@@ -16,11 +16,7 @@ export const InputPassword: FC<Props> = (props) => {
       type={hidden ? 'password' : 'text'}
       classNameEndAdornment={styles.endAdornment}
       endAdornment={
-        <button
-          className={styles.button}
-          onClick={handleEyeClick}
-          type="button"
-        >
+        <button className={styles.qw} onClick={handleEyeClick} type="button">
           <SvgIcon value={hidden ? 'i_24_eye_off' : 'i_24_eye'} />
         </button>
       }

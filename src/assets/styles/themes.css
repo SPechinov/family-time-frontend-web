@@ -23,36 +23,47 @@
   --tab-background-hover: #192531;
   --tab-text: #F5F5F5;
 
+  /* Input */
   --input-background: #17212B;
-  --input-background-hover: #192531;
   --input-border: #1E2C3A;
-  --input-border-focused: #C3C4C5;
   --input-placeholder: #7F91A4;
   --input-text: #F5F5F5;
   --input-disabled-text: #7F91A4;
-  --input-icon: #7F91A4;
   --input-adornment: #7F91A4;
-  --input-adornment-focused: #F5F5F5;
   --input-error: var(--error);
 }
 
 [data-theme="light"] {
-  --primary: #F8F8F8;
-  --error: #D9534F;
+  --primary: #0E1621;
+  --error: #A61717;
   --accent: #0BB560;
 
-  --input-background: #F5F5DC;
-  --input-border: #DCDCDC;
-  --input-border-focused: #007BFF;
-  --input-placeholder: #999999;
-  --input-text: #333333;
-  --input-icon: #999999;
-  --input-adornment: #999999;
-  --input-adornment-focused: #333333;
-  --input-error: var(--error);
-
-  --button-primary-background: #007BFF;
+  /* Buttons */
+  --button-primary-background: #2F6EA5;
+  --button-primary-background-disabled: #667B90;
   --button-primary-text: #FFF;
+  --button-primary-icon: #FFF;
 
-  --button-transparent-text: #007BFF;
+  --button-transparent-text: #2F6EA5;
+  --button-transparent-text-disabled: #667B90;
+  --button-transparent-icon: #2F6EA5;
+
+  /* Inline link */
+  --inline-link: #2F6EA5;
+  --inline-link-hover: #22649f;
+
+  /* Tabs */
+  --tabs-background: #17212B;
+  --tab-background-active: #1E2C3A;
+  --tab-background-hover: #192531;
+  --tab-text: #F5F5F5;
+
+  /* Input */
+  --input-background: #17212B;
+  --input-border: #1E2C3A;
+  --input-placeholder: #7F91A4;
+  --input-text: #F5F5F5;
+  --input-disabled-text: #7F91A4;
+  --input-adornment: #7F91A4;
+  --input-error: var(--error);
 }
