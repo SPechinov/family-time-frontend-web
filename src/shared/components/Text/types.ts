@@ -1,9 +1,9 @@
 import { DOMAttributes, HTMLAttributes } from 'react';
 
 export enum Size {
-  label = 'label',
-  defaultM = 'defaultM',
-  brand = 'brand',
+  s = 's',
+  m = 'm',
+  'brand-m' = 'brand-m',
 }
 
 export enum Tag {

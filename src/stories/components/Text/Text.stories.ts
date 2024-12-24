@@ -26,7 +26,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
   args: {
-    containerSize: 'defaultM',
+    containerSize: 'm',
     children:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consectetur dolorum iste quidem reiciendis. Ea libero officiis pariatur placeat totam!',
   },

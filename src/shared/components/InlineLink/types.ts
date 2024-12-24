@@ -7,5 +7,5 @@ export enum Size {
 
 export type Props = LinkHTMLAttributes<HTMLAnchorElement> &
   DOMAttributes<HTMLAnchorElement> & {
-    containerSize?: keyof typeof Size;
+    containerSize: keyof typeof Size;
   };

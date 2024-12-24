@@ -1,14 +1,14 @@
 @use "../../../assets/styles/text_mixins";
 @use "../../../assets/styles/variables";
 
-.label {
+.s {
   @include text_mixins.s;
 }
 
-.defaultM {
+.m {
   @include text_mixins.m;
 }
 
-.brand {
-  @include text_mixins.text-brand;
+.brand-m {
+  @include text_mixins.text-brand-m;
 }
