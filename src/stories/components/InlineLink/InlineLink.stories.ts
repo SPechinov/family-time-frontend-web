@@ -12,7 +12,7 @@ const meta = {
     containerSize: {
       control: { type: 'select' },
       options: Object.values(InlineLinkSize),
-      description: 'The icon to display',
+      description: 'Size',
     },
   },
 } satisfies Meta<typeof InlineLink>;
@@ -23,7 +23,7 @@ type Story = StoryObj<typeof meta>;
 export const Normal: Story = {
   args: {
     children: 'Inline link',
-    containerSize: 'defaultM',
+    containerSize: 'm',
     href: '',
   },
 };

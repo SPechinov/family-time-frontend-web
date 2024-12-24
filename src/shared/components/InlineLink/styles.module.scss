@@ -11,10 +11,10 @@
   }
 }
 
-.label {
-  @include text_mixins.text-label;
+.s {
+  @include text_mixins.s;
 }
 
-.defaultM {
-  @include text_mixins.text-default-m;
+.m {
+  @include text_mixins.m;
 }

@@ -2,11 +2,11 @@
 @use "../../../assets/styles/variables";
 
 .label {
-  @include text_mixins.text-label;
+  @include text_mixins.s;
 }
 
 .defaultM {
-  @include text_mixins.text-default-m;
+  @include text_mixins.m;
 }
 
 .brand {

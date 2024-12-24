@@ -1,7 +1,7 @@
 @use "../../../../assets/styles/text_mixins";
 
 .wrapper {
-  @include text_mixins.text-label;
+  @include text_mixins.s;
 
   display: flex;
   align-items: center;

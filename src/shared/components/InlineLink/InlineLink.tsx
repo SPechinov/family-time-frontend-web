@@ -6,7 +6,7 @@ import { Props } from './types';
 
 export const InlineLink: FC<Props> = ({
   className,
-  containerSize = 'defaultM',
+  containerSize = 'm',
   ...props
 }) => {
   return (

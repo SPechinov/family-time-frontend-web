@@ -1,8 +1,8 @@
 import { DOMAttributes, LinkHTMLAttributes } from 'react';
 
 export enum Size {
-  label = 'label',
-  defaultM = 'defaultM',
+  s = 's',
+  m = 'm',
 }
 
 export type Props = LinkHTMLAttributes<HTMLAnchorElement> &
