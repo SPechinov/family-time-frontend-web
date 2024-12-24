@@ -2,7 +2,7 @@ import { FC, useMemo, useRef, useState } from 'react';
 import cn from 'classnames';
 
 import styles from './styles.module.scss';
-import { Props, Value } from './types';
+import { Props } from './types';
 import {
   useFloating,
   autoUpdate,
@@ -25,12 +25,13 @@ export const SelectCountry: FC<Props> = ({
   disabled,
   readOnly,
   error,
+  country,
+  onSelectCountry,
 }) => {
   const refControl = useRef<HTMLElement>(null);
   const listControl = useRef<HTMLElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
-  const [value, setValue] = useState<Value | undefined>();
 
   const { refs, floatingStyles } = useFloating({
     whileElementsMounted: autoUpdate,
@@ -61,11 +62,11 @@ export const SelectCountry: FC<Props> = ({
     () => ({
       isOpen,
       setIsOpen,
-      value,
-      setValue,
+      value: OPTIONS.find((optionCountry) => optionCountry.value === country),
+      setValue: onSelectCountry,
       values: OPTIONS,
     }),
-    [isOpen, value]
+    [isOpen, country]
   );
 
   return (

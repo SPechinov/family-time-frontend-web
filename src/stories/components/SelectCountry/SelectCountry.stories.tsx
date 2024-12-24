@@ -1,5 +1,5 @@
 import { type Meta, type StoryObj } from '@storybook/react';
-import { SelectCountry } from '../../../shared';
+import { Country, SelectCountry } from '../../../shared';
 
 const meta = {
   title: 'Components/SelectCountry',
@@ -8,31 +8,45 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {},
+  decorators: [
+    (Story) => (
+      <div style={{ width: 300 }}>
+        <Story />
+      </div>
+    ),
+  ],
+  argTypes: {
+    country: {
+      control: { type: 'select' },
+      options: Object.values(Country),
+    },
+  },
 } satisfies Meta<typeof SelectCountry>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Normal: Story = {
+export const Empty: Story = {
   args: {
-    value: 'russia',
     placeholder: 'Откуда Вы?',
+    country: undefined,
+    onSelectCountry: () => {},
   },
 };
 
-export const Disabled: Story = {
+export const WithValue: Story = {
   args: {
-    placeholder: 'Preview input',
-    value: 'Value',
-    disabled: true,
+    placeholder: 'Откуда Вы?',
+    country: Country.LKA,
+    onSelectCountry: () => {},
   },
 };
 
-export const ReadOnly: Story = {
+export const Error: Story = {
   args: {
-    placeholder: 'Preview input',
-    value: 'Value',
-    readOnly: true,
+    placeholder: 'Откуда Вы?',
+    error: 'Ошибка',
+    country: undefined,
+    onSelectCountry: () => {},
   },
 };

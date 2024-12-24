@@ -1,9 +1,10 @@
 import { createContext, Dispatch, SetStateAction, useContext } from 'react';
 import { Value } from './types.ts';
+import { Country } from '../../types';
 
 export type ContextValue = {
   value?: Value;
-  setValue: Dispatch<SetStateAction<Value | undefined>>;
+  setValue: (value?: Country) => void;
   values: Value[];
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;

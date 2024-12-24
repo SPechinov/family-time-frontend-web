@@ -10,7 +10,7 @@ export const Option: FC<Props> = ({ className, value, ...props }) => {
   const { setValue, setIsOpen } = useSelectCountryContext();
 
   const handleItemClick = () => {
-    setValue(value);
+    setValue(value.value);
     setIsOpen(false);
   };
 
