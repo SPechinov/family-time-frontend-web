@@ -5,11 +5,13 @@
 
   /* Buttons */
   --button-primary-background: #2F6EA5;
-  --button-primary-disabled-background: #667B90;
+  --button-primary-background-disabled: #667B90;
   --button-primary-text: #FFF;
+  --button-primary-icon: #FFF;
 
   --button-transparent-text: #2F6EA5;
-  --button-transparent-disabled-text: #667B90;
+  --button-transparent-text-disabled: #667B90;
+  --button-transparent-icon: #2F6EA5;
 
   --input-background: #17212B;
   --input-background-hover: #192531;

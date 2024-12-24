@@ -17,29 +17,38 @@
     opacity variables.$default-transition-time variables.$default-transition-easing,
     background-color variables.$default-transition-time variables.$default-transition-easing;
 
-  &:hover:not(:disabled) {
+
+  &:hover:not(.disabled):not(.loading) {
     opacity: 0.8;
   }
 
-  &.loading {
-    .content {
-      @extend %hide-content;
-    }
-
-    .loader {
-      opacity: 1;
-      animation: animate-loader 1s infinite ease;
-    }
+  &.disabled {
+    cursor: not-allowed;
   }
+}
+
+.button.loading {
+  .content {
+    @extend %hide-content;
+  }
+
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: animate-loader 1s infinite ease;
+  }
+}
+
+.content {
+  transition: opacity variables.$default-transition-time ease;
 }
 
 .loader {
   @extend %hide-content;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transition: opacity variables.$default-transition-time ease;
 }
 
 .primary {
@@ -47,11 +56,11 @@
   color: var(--button-primary-text);
 
   &.disabled {
-    background-color: var(--button-primary-disabled-background);
+    background-color: var(--button-primary-background-disabled);
   }
 
   .loader {
-    fill: var(--button-primary-text);
+    fill: var(--button-primary-icon);
   }
 }
 
@@ -60,11 +69,11 @@
   color: var(--button-transparent-text);
 
   &.disabled {
-    color: var(--button-transparent-disabled-text);
+    color: var(--button-transparent-text-disabled);
   }
 
   .loader {
-    fill: var(--button-transparent-text);
+    fill: var(--button-transparent-icon);
   }
 }
 

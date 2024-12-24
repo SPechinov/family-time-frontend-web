@@ -25,6 +25,7 @@ export const Button: FC<Props> = ({
       {...props}
     >
       <div className={styles.content}>{children}</div>
+
       {loading && (
         <div className={styles.loader}>
           <SvgIcon value="i_24_loading" />
