@@ -1,7 +1,15 @@
 :root {
-  --base-background: #0E1621;
-  --base-error: #A61717;
-  --base-accent: #0BB560;
+  --primary: #0E1621;
+  --error: #A61717;
+  --accent: #0BB560;
+
+  /* Buttons */
+  --button-primary-background: #2F6EA5;
+  --button-primary-disabled-background: #667B90;
+  --button-primary-text: #FFF;
+
+  --button-transparent-text: #2F6EA5;
+  --button-transparent-disabled-text: #667B90;
 
   --input-background: #17212B;
   --input-background-hover: #192531;
@@ -13,28 +21,21 @@
   --input-icon: #7F91A4;
   --input-adornment: #7F91A4;
   --input-adornment-focused: #F5F5F5;
-  --input-error: var(--base-error);
+  --input-error: var(--error);
 
   --tabs-background: #17212B;
   --tab-background-active: #1E2C3A;
   --tab-background-hover: #192531;
   --tab-text: #F5F5F5;
 
-  --button-primary-background: #2F6EA5;
-  --button-primary-disabled-background: #667B90;
-  --button-primary-text: #FFF;
-
-  --button-transparent-text: #2F6EA5;
-  --button-transparent-disabled-text: #667B90;
-
   --inline-link: #2F6EA5;
   --inline-link-hover: #22649f;
 }
 
 [data-theme="light"] {
-  --base-background: #F8F8F8;
-  --base-error: #D9534F;
-  --base-accent: #0BB560;
+  --primary: #F8F8F8;
+  --error: #D9534F;
+  --accent: #0BB560;
 
   --input-background: #F5F5DC;
   --input-border: #DCDCDC;
@@ -44,7 +45,7 @@
   --input-icon: #999999;
   --input-adornment: #999999;
   --input-adornment-focused: #333333;
-  --input-error: var(--base-error);
+  --input-error: var(--error);
 
   --button-primary-background: #007BFF;
   --button-primary-text: #FFF;

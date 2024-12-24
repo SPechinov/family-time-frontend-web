@@ -2,7 +2,7 @@
 @use "../../../../assets/styles/variables";
 
 .tab {
-  @include text_mixins.text-button;
+  @include text_mixins.button;
 
   padding: 8px;
   border-radius: 10px;

@@ -8,11 +8,11 @@
 }
 
 .button {
-  @include text_mixins.text-button;
+  @include text_mixins.button;
 
   width: 100%;
   padding: 15px 16px;
-  border-radius: 12px;
+  border-radius: variables.$border-radius-m;
   transition:
     opacity variables.$default-transition-time variables.$default-transition-easing,
     background-color variables.$default-transition-time variables.$default-transition-easing;

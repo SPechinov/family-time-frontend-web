@@ -23,7 +23,7 @@ body {
   margin: 0;
   display: flex;
   min-height: 100dvh;
-  background-color: var(--base-background);
+  background-color: var(--primary);
   transition: background-color 0.3ms ease-in-out;
 }
 
