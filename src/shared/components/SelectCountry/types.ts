@@ -6,6 +6,8 @@ export type Props = SelectHTMLAttributes<HTMLSelectElement> &
   DOMAttributes<HTMLSelectElement> & {
     error?: string;
     placeholder: string;
+    disabled?: boolean;
+    readOnly?: boolean;
   };
 
 export type Value = {

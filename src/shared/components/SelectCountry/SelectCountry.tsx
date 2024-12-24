@@ -17,8 +17,15 @@ import { List } from './List';
 import { Option } from './Option';
 import { useCloseList } from './hooks.ts';
 import { mergeRefs } from '../../hooks';
+import { ErrorMessage } from '../ErrorMessage';
 
-export const SelectCountry: FC<Props> = ({ className, placeholder }) => {
+export const SelectCountry: FC<Props> = ({
+  className,
+  placeholder,
+  disabled,
+  readOnly,
+  error,
+}) => {
   const refControl = useRef<HTMLElement>(null);
   const listControl = useRef<HTMLElement>(null);
 
@@ -67,6 +74,9 @@ export const SelectCountry: FC<Props> = ({ className, placeholder }) => {
         <Control
           ref={mergeRefs([refs.setReference, refControl])}
           placeholder={placeholder}
+          disabled={disabled}
+          readOnly={readOnly}
+          error={error ? error.length > 0 : false}
         />
         {isOpen && (
           <List
@@ -79,6 +89,9 @@ export const SelectCountry: FC<Props> = ({ className, placeholder }) => {
           </List>
         )}
       </div>
+      {error && (
+        <ErrorMessage className={styles.errorMessage} message={error} />
+      )}
     </SelectCountryContext.Provider>
   );
 };

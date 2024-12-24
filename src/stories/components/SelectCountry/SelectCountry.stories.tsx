@@ -20,3 +20,19 @@ export const Normal: Story = {
     placeholder: 'Откуда Вы?',
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    placeholder: 'Preview input',
+    value: 'Value',
+    disabled: true,
+  },
+};
+
+export const ReadOnly: Story = {
+  args: {
+    placeholder: 'Preview input',
+    value: 'Value',
+    readOnly: true,
+  },
+};

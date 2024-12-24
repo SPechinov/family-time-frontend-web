@@ -29,6 +29,7 @@
   --input-placeholder: #7F91A4;
   --input-text: #F5F5F5;
   --input-disabled-text: #7F91A4;
+  --input-background-disabled: #161f29;
   --input-adornment: #7F91A4;
   --input-error: var(--error);
 }

@@ -20,7 +20,10 @@
   border: 2px solid var(--input-border);
   border-radius: variables.$border-radius-m;
   outline: none;
-  transition: border-color variables.$default-transition-time variables.$default-transition-easing;
+  transition:
+    border-color variables.$default-transition-time variables.$default-transition-easing,
+    background-color variables.$default-transition-time variables.$default-transition-easing,
+    color variables.$default-transition-time variables.$default-transition-easing;
 
   &:hover:not(:read-only):not(:disabled) ~ .placeholder,
   &:focus:not(:read-only) ~ .placeholder {
@@ -38,6 +41,9 @@
 
   &:disabled {
     color: var(--input-disabled-text);
+    background-color: var(--input-background-disabled);
+    border-color: var(--input-background-disabled);
+    cursor: not-allowed;
   }
 
   &:not(:disabled):read-only {

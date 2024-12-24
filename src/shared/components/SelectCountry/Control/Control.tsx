@@ -7,7 +7,7 @@ import { SvgIcon } from '../../SvgIcon';
 import { Flag } from '../../Flag';
 
 export const Control = forwardRef<HTMLButtonElement, Props>(
-  ({ className, placeholder }, ref) => {
+  ({ className, placeholder, disabled, readOnly, error }, ref) => {
     const { setIsOpen, isOpen, value } = useSelectCountryContext();
 
     const handleToggleClick = () => {
@@ -22,9 +22,13 @@ export const Control = forwardRef<HTMLButtonElement, Props>(
           styles.control,
           value && styles.selected,
           isOpen && styles.open,
+          disabled && styles.disabled,
+          readOnly && styles.readOnly,
+          error && styles.error,
           className
         )}
         onClick={handleToggleClick}
+        disabled={disabled || readOnly}
       >
         <span className={styles.placeholder}>{placeholder}</span>
         <span className={styles.value}>{value?.label}&nbsp;</span>

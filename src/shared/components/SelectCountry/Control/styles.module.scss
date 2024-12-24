@@ -2,6 +2,7 @@
 @use "../../../../assets/styles/variables";
 
 .control {
+  min-width: 250px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -11,27 +12,50 @@
   border: 2px solid var(--input-border);
   border-radius: 12px;
   background: var(--input-background);
+  outline: none;
+  transition:
+    border-color variables.$default-transition-time variables.$default-transition-easing,
+    background-color variables.$default-transition-time variables.$default-transition-easing;
 
-  &:focus {
+  &.selected .placeholder {
+    @include text_mixins.form-placeholder(true);
+  }
+
+  &.open .iconChevron {
+    transform: rotateX(180deg);
+  }
+
+  &:not(:disabled):hover .placeholder,
+  &:focus .placeholder {
     color: var(--input-text);
   }
 
-  &.selected {
-    .placeholder {
-      @include text_mixins.form-placeholder(true);
-      color: var(--input-text);
+  &.disabled {
+    background-color: var(--input-background-disabled);
+    border-color: var(--input-background-disabled);
+    cursor: not-allowed;
+
+    .value {
+      color: var(--input-disabled-text);
+    }
+
+    .iconChevron {
+      fill: var(--input-background-disabled);
     }
   }
 
-  &.open {
-    .iconChevron {
-      transform: rotateX(180deg);
-    }
+  &:not(.disabled).readOnly {
+    border-style: dashed;
+  }
+
+  &.error {
+    border-color: var(--input-error);
   }
 }
 
 .placeholder {
   @include text_mixins.form-placeholder(false);
+
   position: absolute;
   top: 5px;
   left: 20px;
@@ -50,6 +74,7 @@
 .value {
   @include text_mixins.form;
   padding-top: 14px;
+  margin-right: 4px;
   pointer-events: none;
   user-select: none;
   color: var(--input-text);
@@ -62,5 +87,7 @@
 .iconChevron {
   margin-left: 12px;
   top: 50%;
-  fill: var(--input-text);
+  fill: var(--input-placeholder);
+  transition:
+          fill variables.$default-transition-time variables.$default-transition-easing;
 }
