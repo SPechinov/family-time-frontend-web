@@ -20,7 +20,11 @@ export const SignUpForm: FC<Props> = ({ className }) => {
         inputMode="email"
       />
       <InputPassword className={styles.input} placeholder="Password" />
-      <SelectCountry className={styles.input} placeholder="Откуда Вы?" />
+      <SelectCountry
+        className={styles.input}
+        onSelectCountry={() => {}}
+        placeholder="Откуда Вы?"
+      />
       <Button className={styles.buttonSubmit} theme="primary" type="submit">
         Отправить код
       </Button>

@@ -15,7 +15,7 @@ export const SignInForm: FC<Props> = ({ className }) => {
         inputMode="email"
       />
       <InputPassword className={styles.input} placeholder="Password" />
-      <InlineLink className={styles.linkForgotPassword}>
+      <InlineLink className={styles.linkForgotPassword} containerSize="m">
         Забыли пароль?
       </InlineLink>
       <Button className={styles.buttonSubmit} theme="primary" type="submit">
