@@ -8,24 +8,8 @@ export const Main: FC = () => {
   return (
     <LayoutAuth>
       <Routes>
-        <Route
-          path={routes.signIn.root}
-          element={
-            <WidgetAuth
-              signInAbsPath={routes.signIn.abs}
-              signUpAbsPath={routes.signUp.abs}
-            />
-          }
-        />
-        <Route
-          path={routes.signUp.root}
-          element={
-            <WidgetAuth
-              signInAbsPath={routes.signIn.abs}
-              signUpAbsPath={routes.signUp.abs}
-            />
-          }
-        />
+        <Route path={routes.signIn.root} element={<WidgetAuth />} />
+        <Route path={routes.signUp.root} element={<WidgetAuth />} />
         <Route path="*" element={<Navigate to={routes.signIn.abs} />} />
       </Routes>
     </LayoutAuth>
