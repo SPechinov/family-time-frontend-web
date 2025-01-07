@@ -1,4 +1,4 @@
-import { createContext, Dispatch, SetStateAction, useContext } from 'react';
+import { createContext, useContext } from 'react';
 import { Value } from './types.ts';
 import { Country } from '../../types';
 
@@ -7,7 +7,7 @@ export type ContextValue = {
   setValue: (value?: Country) => void;
   values: Value[];
   isOpen: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  setIsOpen: (isOpen: boolean) => void;
 };
 
 export const SelectCountryContext = createContext<ContextValue | undefined>(

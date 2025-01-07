@@ -1,2 +1,5 @@
 export { SignUpForm } from './SignUpForm.tsx';
-export type { Props as SignUpFormProps } from './types';
+export type {
+  Props as SignUpFormProps,
+  Values as SignUpFormValues,
+} from './types';

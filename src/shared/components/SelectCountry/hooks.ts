@@ -1,16 +1,11 @@
-import {
-  Dispatch,
-  MutableRefObject,
-  SetStateAction,
-  useLayoutEffect,
-} from 'react';
+import { MutableRefObject, useLayoutEffect } from 'react';
 
 export const useCloseList = (
   refs: {
     control: MutableRefObject<HTMLElement | null>;
     list: MutableRefObject<HTMLElement | null>;
   },
-  setIsOpen: Dispatch<SetStateAction<boolean>>
+  setIsOpen: (isOpen: boolean) => void
 ) => {
   useLayoutEffect(() => {
     const cbScroll = (event: Event) => {

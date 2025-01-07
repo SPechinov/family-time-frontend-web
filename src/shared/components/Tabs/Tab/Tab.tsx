@@ -15,6 +15,7 @@ export const Tab = memo<Props>(({ className, value, ...props }) => {
       data-value={value}
       aria-selected={isActive}
       role="tab"
+      type="button"
       {...props}
     />
   );

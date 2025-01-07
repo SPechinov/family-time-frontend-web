@@ -27,11 +27,18 @@ export const SelectCountry: FC<Props> = ({
   error,
   country,
   onSelectCountry,
+  onCloseMenu,
 }) => {
   const refControl = useRef<HTMLElement>(null);
   const listControl = useRef<HTMLElement>(null);
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpenState] = useState(false);
+
+  const setIsOpen = (isOpen: boolean) => {
+    setIsOpenState(isOpen);
+    if (isOpen) return;
+    onCloseMenu?.();
+  };
 
   const { refs, floatingStyles } = useFloating({
     whileElementsMounted: autoUpdate,
@@ -89,10 +96,10 @@ export const SelectCountry: FC<Props> = ({
             ))}
           </List>
         )}
+        {error && (
+          <ErrorMessage className={styles.errorMessage} message={error} />
+        )}
       </div>
-      {error && (
-        <ErrorMessage className={styles.errorMessage} message={error} />
-      )}
     </SelectCountryContext.Provider>
   );
 };

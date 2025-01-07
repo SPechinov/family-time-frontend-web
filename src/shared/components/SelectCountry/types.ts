@@ -10,6 +10,7 @@ export type Props = SelectHTMLAttributes<HTMLSelectElement> &
     readOnly?: boolean;
     country?: Country;
     onSelectCountry: (value?: Country) => void;
+    onCloseMenu?: () => void;
   };
 
 export type Value = {
