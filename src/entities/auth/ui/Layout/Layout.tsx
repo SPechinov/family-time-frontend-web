@@ -9,10 +9,12 @@ export const Layout: FC<Props> = ({ className, children }) => {
   return (
     <div className={cn(styles.layout, className)}>
       <div className={styles.top}>
-        <Logo containerSize={180} />
-        <Text className={styles.title} tag="h2" containerSize="brand-m">
-          Family Time
-        </Text>
+        <div className={styles.topInfo}>
+          <Logo containerSize={180} />
+          <Text className={styles.title} tag="h2" containerSize="brand-m">
+            Family Time
+          </Text>
+        </div>
       </div>
       <div className={styles.bottom}>{children}</div>
     </div>
