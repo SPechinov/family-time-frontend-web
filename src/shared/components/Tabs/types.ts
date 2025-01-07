@@ -1,7 +1,7 @@
 import { DOMAttributes, HTMLAttributes } from 'react';
 
-export type Props = HTMLAttributes<HTMLDivElement> &
+export type Props<T extends string> = HTMLAttributes<HTMLDivElement> &
   DOMAttributes<HTMLDivElement> & {
-    activeValue: string;
-    onClickTab: (value: string) => void;
+    activeValue: T;
+    onTabClick: (value: T) => void;
   };

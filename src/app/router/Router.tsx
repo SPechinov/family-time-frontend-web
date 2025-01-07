@@ -1,12 +1,13 @@
 import { FC } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router';
-import { PageMain } from '../../pages/auth';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
+import { authRoutes, PageAuthMain } from '../../pages/auth';
 
 export const Router: FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<PageMain />} />
+        <Route path={`${authRoutes.root}/*`} element={<PageAuthMain />} />
+        <Route path="*" element={<Navigate to={authRoutes.root} />} />
       </Routes>
     </BrowserRouter>
   );

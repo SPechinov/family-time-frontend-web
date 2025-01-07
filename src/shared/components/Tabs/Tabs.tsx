@@ -1,4 +1,4 @@
-import { FC, useCallback, MouseEventHandler, useMemo } from 'react';
+import { useCallback, MouseEventHandler, useMemo, ReactElement } from 'react';
 import { Props } from './types.ts';
 import { Tab } from './Tab';
 import cn from 'classnames';
@@ -6,14 +6,14 @@ import styles from './styles.module.scss';
 import { Context, TabsContext } from './context.ts';
 import { DATA_VALUE } from './constants.ts';
 
-const Component: FC<Props> = ({
+const Component = <T extends string>({
   className,
   activeValue,
-  onClickTab,
+  onTabClick,
   children,
   onClick,
   ...props
-}) => {
+}: Props<T>): ReactElement => {
   const contextState = useMemo<Context>(
     () => ({ activeValue }),
     [children, activeValue]
@@ -24,10 +24,10 @@ const Component: FC<Props> = ({
       onClick?.(event);
       if (!(event.target instanceof HTMLButtonElement)) return;
 
-      const dataValue = event.target.getAttribute(DATA_VALUE);
+      const dataValue = event.target.getAttribute(DATA_VALUE) as T | undefined;
       if (!dataValue) return;
 
-      onClickTab(dataValue);
+      onTabClick(dataValue);
     },
     []
   );
