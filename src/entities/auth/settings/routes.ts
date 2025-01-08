@@ -9,4 +9,8 @@ export const routes = {
     root: 'sign-up',
     abs: '/auth/sign-up',
   },
+  forgotPassword: {
+    root: 'forgot-password',
+    abs: '/auth/forgot-password',
+  },
 };

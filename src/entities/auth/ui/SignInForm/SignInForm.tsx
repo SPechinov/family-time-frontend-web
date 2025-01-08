@@ -11,6 +11,7 @@ import {
   validationGroups,
 } from '../../../../shared';
 import { useForm } from 'react-hook-form';
+import { authRoutes } from '../../settings';
 
 export const SignInForm: FC<Props> = ({
   className,
@@ -63,7 +64,11 @@ export const SignInForm: FC<Props> = ({
           ...validationGroups.password,
         })}
       />
-      <InlineLink className={styles.linkForgotPassword} containerSize="m">
+      <InlineLink
+        to={authRoutes.forgotPassword.abs}
+        className={styles.linkForgotPassword}
+        containerSize="m"
+      >
         Забыли пароль?
       </InlineLink>
       <Button className={styles.buttonSubmit} theme="primary" type="submit">

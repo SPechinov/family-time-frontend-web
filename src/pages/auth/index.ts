@@ -1,2 +1,2 @@
-export { Main as PageAuthMain } from './Main';
-export { routes as authRoutes } from './routes';
+export { Main as AuthMain } from './Main';
+export { ForgotPassword as AuthForgotPassword } from './ForgotPassword';

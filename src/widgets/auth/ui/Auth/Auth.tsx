@@ -4,9 +4,8 @@ import { Props } from './types.ts';
 import { Tabs } from '../../../../shared';
 
 import styles from './styles.module.scss';
-import { SignInForm, SignUpForm } from '../../../../entities/auth';
+import { authRoutes, SignInForm, SignUpForm } from '../../../../entities/auth';
 import { useLocation, useNavigate } from 'react-router';
-import { authRoutes } from '../../../../pages/auth';
 import { useFormsStates } from './hooks.ts';
 
 export const Auth: FC<Props> = ({ className }) => {

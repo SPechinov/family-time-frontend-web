@@ -3,6 +3,7 @@ import cn from 'classnames';
 
 import styles from './styles.module.scss';
 import { Props } from './types';
+import { NavLink } from 'react-router';
 
 export const InlineLink: FC<Props> = ({
   className,
@@ -10,7 +11,7 @@ export const InlineLink: FC<Props> = ({
   ...props
 }) => {
   return (
-    <a
+    <NavLink
       className={cn(styles.inlineLink, styles[containerSize], className)}
       {...props}
     />
