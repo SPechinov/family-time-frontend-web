@@ -8,3 +8,4 @@ export * from './InlineLink';
 export * from './Tabs';
 export * from './Flag';
 export * from './SelectCountry';
+export * from './InputCode';

@@ -1,0 +1,25 @@
+@use "../../../assets/styles/text_mixins";
+@use "../../../assets/styles/variables";
+
+.wrapper {
+  width: min-content;
+}
+
+.inputs {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+
+  &:not(.disabled) {
+    cursor: text;
+  }
+}
+
+.input {
+  width: 45px;
+}
+
+.errorMessage {
+  margin-top: 4px;
+}

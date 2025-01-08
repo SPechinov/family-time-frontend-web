@@ -1,0 +1,32 @@
+@use "../../../../assets/styles/text_mixins";
+@use "../../../../assets/styles/variables";
+
+.input {
+  @include text_mixins.form;
+
+  padding: 20px 16px;
+  background-color: var(--input-background);
+  border: 2px solid var(--input-border);
+  border-radius: 12px;
+  color: var(--input-text);
+  text-align: center;
+  transition: variables.$default-transition-time variables.$default-transition-easing;
+
+  &.error {
+    border-color: var(--input-error);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--input-text);
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &:disabled {
+    color: var(--input-disabled-text);
+    background-color: var(--input-background-disabled);
+  }
+}
