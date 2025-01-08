@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC, useCallback, useEffect } from 'react';
 import cn from 'classnames';
 import { Props } from './types.ts';
 import { Tabs } from '../../../../shared';
@@ -47,12 +47,16 @@ export const Auth: FC<Props> = ({ className }) => {
 
   const activeValue = location.pathname;
 
+  const handleTabChange = useCallback((tab: string) => {
+    navigate(tab, { replace: true });
+  }, []);
+
   return (
     <div className={cn(styles.wrapper, className)}>
       <Tabs
         className={styles.tabs}
         activeValue={activeValue}
-        onTabClick={navigate}
+        onTabClick={handleTabChange}
       >
         <Tabs.Tab className={styles.tab} value={authRoutes.signIn.abs}>
           Войти
