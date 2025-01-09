@@ -2,6 +2,7 @@
 @use "../../../assets/styles/variables";
 
 .inlineLink {
+  display: inline-block;
   color: var(--inline-link);
   text-decoration: underline;
   transition: color variables.$default-transition-time variables.$default-transition-easing;

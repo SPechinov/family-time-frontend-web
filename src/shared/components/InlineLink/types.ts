@@ -1,4 +1,5 @@
 import { DOMAttributes, LinkHTMLAttributes } from 'react';
+import { LinkProps } from 'react-router';
 
 export enum Size {
   s = 's',
@@ -6,7 +7,9 @@ export enum Size {
 }
 
 export type Props = LinkHTMLAttributes<HTMLAnchorElement> &
-  DOMAttributes<HTMLAnchorElement> & {
-    to: string;
+  DOMAttributes<HTMLAnchorElement> &
+  LinkProps & {
     containerSize: keyof typeof Size;
   };
+
+export type PropsBack = Omit<Props, 'to'>;

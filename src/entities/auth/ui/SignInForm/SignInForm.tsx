@@ -71,7 +71,7 @@ export const SignInForm: FC<Props> = ({
       >
         Забыли пароль?
       </InlineLink>
-      <Button className={styles.buttonSubmit} theme="primary" type="submit">
+      <Button theme="primary" type="submit">
         Войти
       </Button>
     </form>

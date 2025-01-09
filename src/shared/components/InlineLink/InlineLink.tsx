@@ -2,14 +2,10 @@ import { FC } from 'react';
 import cn from 'classnames';
 
 import styles from './styles.module.scss';
-import { Props } from './types';
-import { NavLink } from 'react-router';
+import { Props, PropsBack } from './types';
+import { NavLink, useNavigate } from 'react-router';
 
-export const InlineLink: FC<Props> = ({
-  className,
-  containerSize,
-  ...props
-}) => {
+const Component: FC<Props> = ({ className, containerSize, ...props }) => {
   return (
     <NavLink
       className={cn(styles.inlineLink, styles[containerSize], className)}
@@ -17,3 +13,19 @@ export const InlineLink: FC<Props> = ({
     />
   );
 };
+
+export const Back: FC<PropsBack> = (props) => {
+  const navigate = useNavigate();
+  return (
+    <Component
+      to=".."
+      onClick={(event) => {
+        event.preventDefault();
+        navigate(-1);
+      }}
+      {...props}
+    />
+  );
+};
+
+export const InlineLink = Object.assign(Component, { Back });
